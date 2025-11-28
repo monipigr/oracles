@@ -124,7 +124,8 @@ Adds validation layers on top of `PythOracle.sol`:
 - `pyth.updatePriceFeeds{value: fee}(updateData)` functions requires a fee. Implement first the `.getUpdateFee()` function to get the value of the fee.
 - Do not use `getPriceUnsafe()` as it not checks if the price is stale
 - Use instead the `.getPriceNoOlderThan()` with the priceId and the number of seconds.
-- Check the pyth response with an internal `_validatePrice` function: - Ensure the price is greater than 0 - Ensure the exponent is greater than the minimum one - Ensure the confidence ratio is greater than the minimum one
+- Check the pyth response with an internal `_validatePrice` function:
+- Ensure the price is greater than 0 - Ensure the exponent is greater than the minimum one - Ensure the confidence ratio is greater than the minimum one
 
 ---
 
